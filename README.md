@@ -1,13 +1,12 @@
 # App Snapshots
 
 ## Desktop UI
-<img width="1134" alt="image" src="https://github.com/user-attachments/assets/3142e648-8274-46f8-abe5-8960f7e7537e">
+
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/b85e3504-4ada-4b79-968d-7b85f5f811ba">
 
 <img width="1146" alt="image" src="https://github.com/user-attachments/assets/2b7012e8-390c-40f8-b644-792bd0768310">
 
 <img width="1145" alt="image" src="https://github.com/user-attachments/assets/180dd0ed-feba-451c-a65f-d21c6a2c02ad">
-
-<img width="1139" alt="image" src="https://github.com/user-attachments/assets/ad8c3dce-c84c-4ffd-8556-4f6b637cf41d">
 
 
 ## Mobile UI
