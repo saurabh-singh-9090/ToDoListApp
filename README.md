@@ -11,11 +11,12 @@
 
 ## Mobile UI
 
-<img width="304" alt="image" src="https://github.com/user-attachments/assets/950be9fc-d416-40ef-9e29-6e38814c304e">
+<img width="301" alt="image" src="https://github.com/user-attachments/assets/961d8b29-0d21-4c13-8cc0-9e3087915ebe">
 
-<img width="302" alt="image" src="https://github.com/user-attachments/assets/c0591afa-e38b-4467-a5a9-e4b43ea9a44c">
+<img width="301" alt="image" src="https://github.com/user-attachments/assets/5e3dcc5a-6634-43c1-946d-04b921b2252f">
 
-<img width="304" alt="image" src="https://github.com/user-attachments/assets/c65f8e82-9888-42ff-852f-02ec7056f382">
+<img width="301" alt="image" src="https://github.com/user-attachments/assets/4be88c4e-8cd1-450e-9883-78177c120b47">
+
 
 
 
