@@ -20,17 +20,6 @@ const Task = ({ task }) => {
         </div>
     )
 
-    // return (
-        // <div style={{ backgroundColor: task.completed ? '#e8f3e1' : '' }}
-        //     className='task-item'
-        //     onClick={() => toggleTaskCompletion(task.id)}
-        // >
-        //     <span style={{
-        //         textDecoration: task.completed ? 'line-through' : 'none',
-        //     }}>{task.text}</span>
-        //     <span onClick={() => deleteTask(task.id)}>X</span>
-        // </div>
-    // );
 };
 
 export default Task;
