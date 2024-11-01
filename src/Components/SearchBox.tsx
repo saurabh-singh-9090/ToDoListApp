@@ -8,7 +8,7 @@ const SearchBox = () => {
 
     const [searchInput, setSearchInput] = useState('');
 
-    const debounceSearch = (fn, delay) => {
+    const debounceSearch = (fn: any, delay: any) => {
         let timer;
         return (...args) => {
             clearTimeout(timer);
@@ -32,7 +32,7 @@ const SearchBox = () => {
                     handleSearchChange(e.target.value);
                 }}
             />
-            <span className="search-icon">🔍</span>
+            {/* <span className="search-icon">🔍</span> */}
         </div>
     )
 }

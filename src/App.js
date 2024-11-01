@@ -1,10 +1,11 @@
 import './App.css';
-import ToDoListApp from './Components/ToDoListApp';
+import ToDoList from './Components/ToDoList';
 
-function App() {
-  return (
+const  App = () => {
+
+  return ( 
     <div className="App">
-      <ToDoListApp/>
+      <ToDoList/>
     </div>
   );
 }
