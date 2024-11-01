@@ -1,12 +1,12 @@
 import React from 'react';
-import './toDoList.css';
 import { TaskProvider } from './utils/TaskContext';
+import './toDoList.css';
 import SearchBox from './SearchBox';
 import HeaderButtons from './HeaderButtons';
 import TaskList from './TaskList';
 import TaskInput from './TaskInput';
 
-function ToDoListApp() {
+const ToDoList = ()  => {
   return (
     <TaskProvider>
       <div className="to-do-list-app">
@@ -22,4 +22,4 @@ function ToDoListApp() {
   );
 }
 
-export default ToDoListApp;
+export default ToDoList;
