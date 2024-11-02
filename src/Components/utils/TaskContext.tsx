@@ -15,6 +15,10 @@ type TaskContextType = {
   setFilter: (filter: string) => void;
   searchTerm: string;
   setSearchTerm: (searchTerm: string) => void;
+  undo: () => void;
+  redo: () => void;
+  pastStates: any;
+  futureStates: any;
 };
 
 export const TaskContext = createContext<TaskContextType | undefined>(undefined);
@@ -30,6 +34,8 @@ export const TaskProvider: React.FC<TaskProviderProps> = ({ children }) => {
   });
   const [filter, setFilter] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [pastStates, setPastStates] = useState([]);
+  const [futureStates, setFutureStates] = useState([]);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -37,22 +43,48 @@ export const TaskProvider: React.FC<TaskProviderProps> = ({ children }) => {
 
   const addTask = (task: string) => {
     if (!task.trim()) return;
-    setTasks([...tasks, { id: Date.now(), text: task, completed: false }]);
+    updateTasks([...tasks, { id: Date.now(), text: task, completed: false }]);
   };
 
   const toggleTaskCompletion = (taskId: number) => {
-    setTasks(tasks.map(task =>
+    const newTasks = tasks.map((task) =>
       task.id === taskId ? { ...task, completed: !task.completed } : task
-    ));
+    );
+    updateTasks(newTasks);
   };
 
   const deleteTask = (taskId: number) => {
-    setTasks(tasks.filter(task => task.id !== taskId));
+    const newTasks = tasks.filter((task) => task.id !== taskId);
+    updateTasks(newTasks);
+  };
+
+  const updateTasks = (newTasks) => {
+    // Save the current state to past states
+    setPastStates((prev) => [...prev, tasks]);
+    // Clear future states on any new action
+    setFutureStates([]);
+    setTasks(newTasks);
+  };
+
+  const undo = () => {
+    if (pastStates.length === 0) return;
+    const previousTasks = pastStates[pastStates.length - 1];
+    setFutureStates((future) => [tasks, ...future]);
+    setPastStates((past) => past.slice(0, -1));
+    setTasks(previousTasks);
+  };
+
+  const redo = () => {
+    if (futureStates.length === 0) return;
+    const nextTasks = futureStates[0];
+    setPastStates((past) => [...past, tasks]);
+    setFutureStates((future) => future.slice(1));
+    setTasks(nextTasks);
   };
 
   return (
     <TaskContext.Provider value={{
-      tasks, addTask, toggleTaskCompletion, deleteTask, filter, setFilter, searchTerm, setSearchTerm
+      tasks, addTask, toggleTaskCompletion, deleteTask, filter, setFilter, searchTerm, setSearchTerm, undo, redo,pastStates,futureStates
     }}>
       {children}
     </TaskContext.Provider>
