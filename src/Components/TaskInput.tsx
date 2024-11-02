@@ -3,7 +3,7 @@ import { TaskContext } from './utils/TaskContext';
 
 const TaskInput = () => {
   const { addTask } = useContext(TaskContext);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState<string>('');
 
   return (
     <div>

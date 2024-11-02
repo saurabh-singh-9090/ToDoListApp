@@ -6,17 +6,17 @@ const SearchBox = () => {
 
     const { setSearchTerm } = useContext(TaskContext);
 
-    const [searchInput, setSearchInput] = useState('');
+    const [searchInput, setSearchInput] = useState<string>('');
 
-    const debounceSearch = (fn: any, delay: any) => {
+    const debounceSearch = (fn: (value: string) => void, delay: number) => {
         let timer;
-        return (...args) => {
+        return (...args: [string]) => {
             clearTimeout(timer);
             timer = setTimeout(() => fn(...args), delay);
         };
     };
 
-    const handleSearchChange = debounceSearch((value) => {
+    const handleSearchChange = debounceSearch((value: string) => {
         setSearchTerm(value);
     }, 300);
 
