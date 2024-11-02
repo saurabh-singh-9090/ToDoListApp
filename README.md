@@ -18,12 +18,14 @@
 <img width="301" alt="image" src="https://github.com/user-attachments/assets/4be88c4e-8cd1-450e-9883-78177c120b47">
 
 
-
-
-
-
-
-
+# Features Implemented: 
+1. Add Task Functionality
+2. Delete Task functionality
+3. Search Task functionality with debounce feature to prevent unnecessary API calls
+4. Filter Tasks functionalities [all, completed and uncompleted]
+5. Undo Redo functionality
+6. Responsive UI which fits well on desktop and mobile screens
+   
 
 ## Available Scripts
 
