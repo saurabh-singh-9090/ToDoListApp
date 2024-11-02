@@ -2,11 +2,11 @@
 
 ## Desktop UI
 
-<img width="1132" alt="image" src="https://github.com/user-attachments/assets/b85e3504-4ada-4b79-968d-7b85f5f811ba">
+<img width="1134" alt="image" src="https://github.com/user-attachments/assets/660a4729-c1dc-4f16-bd22-2df02c8df346">
 
-<img width="1146" alt="image" src="https://github.com/user-attachments/assets/2b7012e8-390c-40f8-b644-792bd0768310">
+<img width="1138" alt="image" src="https://github.com/user-attachments/assets/f773ad6e-20d9-4f29-b032-e4a23de8002b">
 
-<img width="1145" alt="image" src="https://github.com/user-attachments/assets/180dd0ed-feba-451c-a65f-d21c6a2c02ad">
+<img width="1142" alt="image" src="https://github.com/user-attachments/assets/4fe8fdee-b66b-4643-aeea-826aa448bf91">
 
 
 ## Mobile UI
